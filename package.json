@@ -1,14 +1,14 @@
 {
   "name": "tingfeng",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "测试发布npm包",
   "author": {
     "name": "tingfeng",
     "email": "shisanlailin@outllok.com"
   },
-  "main": "./tingfeng-ui/ting-feng-ui.umd.cjs",
-  "module": "./tingfeng-ui/ting-feng-ui.umd.cjs",
+  "main": "./tingfeng-ui/index.js",
+  "module": "./tingfeng-ui/index.umd.cjs",
   "type": "module",
   "types": "./tingfeng-ui/index.d.ts",
   "files": [
@@ -31,7 +31,6 @@
   "dependencies": {
     "@types/node": "^20.8.8",
     "less": "^4.2.0",
-    "tingfeng-ui-test": "^0.0.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {
