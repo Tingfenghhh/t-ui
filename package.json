@@ -19,7 +19,10 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "keywords": [
     "tingfeng",
@@ -31,6 +34,7 @@
   "dependencies": {
     "@types/node": "^20.8.8",
     "less": "^4.2.0",
+    "vitepress": "^1.0.0-rc.24",
     "vue": "^3.3.4"
   },
   "devDependencies": {
