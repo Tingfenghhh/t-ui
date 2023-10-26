@@ -5,7 +5,8 @@ import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), dts()],
+  plugins: [vue(), dts(
+  )],
   build: {
     outDir: "tingfeng-ui-test", //输出文件名称
     lib: {
@@ -22,6 +23,15 @@ export default defineConfig({
           vue: "Vue",
         },
       },
-    }, // rollup打包配置
+    },
+    terserOptions: { // 在打包代码时移除 console、debugger 和 注释
+      compress: {
+        drop_console: true, // 生产环境时移除console
+        drop_debugger: true
+      },
+      format: {
+        comments: false // 删除注释comments
+      }
+    }
   },
 })
