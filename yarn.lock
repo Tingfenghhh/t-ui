@@ -840,6 +840,15 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmmirror.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+tingfeng-ui-test@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/tingfeng-ui-test/-/tingfeng-ui-test-0.0.1.tgz#7b76e341273f5e3240a119bab8557d19a4e7dc01"
+  integrity sha512-70MJ+l3cdN7/uWkcMX8otckWZolNUjGgfY9Fh6tqzX4lDYqlF3Cqsrys3m/vAoO9ThhlFsVu2VjTwwKsydWykw==
+  dependencies:
+    "@types/node" "^20.8.8"
+    less "^4.2.0"
+    vue "^3.3.4"
+
 to-fast-properties@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmmirror.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"

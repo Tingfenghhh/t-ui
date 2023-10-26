@@ -1,5 +1,5 @@
 {
-  "name": "tingfeng-ui",
+  "name": "tingfeng-ui-test",
   "private": false,
   "version": "0.0.1",
   "description": "测试发布npm包",
@@ -31,6 +31,7 @@
   "dependencies": {
     "@types/node": "^20.8.8",
     "less": "^4.2.0",
+    "tingfeng-ui-test": "^0.0.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {
