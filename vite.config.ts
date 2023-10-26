@@ -16,7 +16,7 @@ export default defineConfig({
     lib: {
       entry: "./packages/index.ts", //指定组件编译入口文件
       name: "ting-feng-ui", //指定组件库的名称
-      fileName: "tf-ui",
+      fileName: "index",
     }, //库编译模式配置
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖
