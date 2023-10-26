@@ -7,12 +7,12 @@
     "name": "tingfeng",
     "email": "shisanlailin@outllok.com"
   },
-  "main": "./tingfeng-ui-test/ting-feng-ui.umd.cjs",
-  "module": "./tingfeng-ui-test/ting-feng-ui.umd.cjs",
+  "main": "./tingfeng-ui/ting-feng-ui.umd.cjs",
+  "module": "./tingfeng-ui/ting-feng-ui.umd.cjs",
   "type": "module",
-  "types": "./tingfeng-ui-test/index.d.ts",
+  "types": "./tingfeng-ui/index.d.ts",
   "files": [
-    "tingfeng-ui-test",
+    "tingfeng-ui",
     "README.md",
     "LICENSE",
     "global.d.ts"
