@@ -2,16 +2,16 @@
 layout: home
 
 hero:
-  name: tingfengUI组件
-  text: 方便自己.
+  name: Tingfeng-UI组件
+  text: 方便自己
   tagline: 方便大家
   image:
-    src: /logos.png
-    alt: tingfen
+    src: /logo.png
+    alt: tingfeng
   actions:
     - theme: brand
       text: 快速开始
-      link: ./articles/start
+      link: ./guide/start
     - theme: alt
       text: 在Gitee上查看
       link: https://gitee.com/shisanlailin

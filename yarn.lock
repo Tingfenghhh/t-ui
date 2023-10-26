@@ -1190,6 +1190,11 @@ vite@^4.4.5, vite@^4.5.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
+vitepress-demoblock@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npmmirror.com/vitepress-demoblock/-/vitepress-demoblock-1.0.4.tgz#ed6f2cd799813485e1571abfcea4e09b4d805585"
+  integrity sha512-k7Asrpp5X5cGl2SeMJFcafKdHSQQR7lXsZPpkUvRepZR7DKtmYq6tjfff6UInmaVYTdDvfJkobo/5KSxX0mPlA==
+
 vitepress@^1.0.0-rc.24:
   version "1.0.0-rc.24"
   resolved "https://registry.npmjs.org/vitepress/-/vitepress-1.0.0-rc.24.tgz#517b44d10e0cd3773f5e2f9799c2bde8e60f0505"
