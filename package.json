@@ -1,5 +1,5 @@
 {
-  "name": "tingfeng",
+  "name": "tingfeng-ui",
   "private": false,
   "version": "0.0.1",
   "description": "测试发布npm包",
@@ -7,12 +7,19 @@
     "name": "tingfeng",
     "email": "shisanlailin@outllok.com"
   },
+  "main": "./tingfeng-ui-test/ting-feng-ui.umd.cjs",
+  "module": "./tingfeng-ui-test/ting-feng-ui.umd.cjs",
   "type": "module",
+  "types": "./tingfeng-ui-test/index.d.ts",
+  "files": [
+    "tingfeng-ui-test",
+    "README.md",
+    "LICENSE",
+    "global.d.ts"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "build-dts": "vue-tsc --declaration --emitDeclarationOnly src/components/tingfeng-UI/button/index.vue",
-    "preview": "vite preview"
+    "build": "vite build"
   },
   "keywords": [
     "tingfeng",
@@ -31,6 +38,7 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.6.1",
     "vue-tsc": "^1.8.5"
   },
   "license": "MIT"
