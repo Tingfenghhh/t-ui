@@ -12,7 +12,6 @@ dist
 dist-ssr
 tingfeng-ui
 tingfeng-ui-test
-docs
 *.local
 
 # Editor directories and files
