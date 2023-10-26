@@ -5,7 +5,6 @@ const click = (e: MouseEvent) => {
 </script>
 
 <template>
-  <h1>dasd</h1>
   <Tbutton size="large" type="primary" @handleClick="click">测试组件</Tbutton>
 </template>
 
