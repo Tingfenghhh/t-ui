@@ -7,6 +7,7 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   plugins: [vue(
     {
+      // 解决vite中使用ionicons的警告的问题
       template: {
         compilerOptions: {
           isCustomElement: (tag) => ['ion-icon'].includes(tag),
