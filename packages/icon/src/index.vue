@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="ts" setup name="Ticon">
 import { computed } from "vue";
 
 interface IconProps {
