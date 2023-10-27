@@ -57,11 +57,11 @@ export default defineConfig({
                 ],
             },
             {
-                text: "...",
+                text: "其他依赖",
                 items: [
                     {
-                        text: "...",
-                        link: "...",
+                        text: "@ionic/vue",
+                        link: "/guide/iconsMd/icon",
                     },
                 ],
             },

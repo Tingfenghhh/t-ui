@@ -31,9 +31,15 @@
 
 ## 图标按钮
 
-按钮可以带图标
+按钮可以带图标,使用图标请先安装[`@ionic/vue`](iconsMd/icon.md)组件库
 
-<demo src="../components/Button/Button-icon.vue"></demo>
+<script setup lang="ts">
+import Ticon from "../../packages/icon/src/index.vue"
+</script>
+
+<Ticon :name="'diamond-outline'" :color="'white'" :size="16" />
+<!-- <demo src="../components/Button/Button-icon.vue"></demo> -->
+
 
 ## 加载中
 
