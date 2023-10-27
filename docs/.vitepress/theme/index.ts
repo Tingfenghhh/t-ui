@@ -8,7 +8,6 @@ export default {
     ...DefaultTheme,
     async enhanceApp({ app }) {
         app.component('demo', demo)
-
     }
 
 } satisfies Theme

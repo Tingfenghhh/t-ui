@@ -10,6 +10,14 @@ export default defineConfig({
     // tsconfigPath: "./tsconfig.json",
   }
   )],
+  css: {
+    // 配置less
+    preprocessorOptions: {
+      less: {
+        additionalData: `@import "${path.resolve(__dirname, "packages/global.less")}";`
+      },
+    },
+  },
   build: {
     cssCodeSplit: true, //将css文件单独打包
     outDir: "tingfeng-ui", //输出文件名称

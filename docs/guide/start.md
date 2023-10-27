@@ -65,7 +65,7 @@ const click = (e: MouseEvent) => {
 }
 ```
 
-::: info
+::: info 提示
 如果没有组件的类型提示，请重启编译器
 :::
 

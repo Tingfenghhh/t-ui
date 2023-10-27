@@ -23,6 +23,7 @@ const handleClick = (e: MouseEvent) => {
     class="tingfeng-btn"
     :class="[props.size, props.type]"
     @click="handleClick"
+    type="button"
   >
     <!-- 定义插槽用于让用户自定义按钮你们的内容 -->
     <slot></slot>
@@ -30,5 +31,5 @@ const handleClick = (e: MouseEvent) => {
 </template>
 
 <style scoped lang="less">
-@import url(./style/index.less);
+@import url("./style/index.less");
 </style>
