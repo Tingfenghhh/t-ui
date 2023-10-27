@@ -16,6 +16,32 @@
 
 <demo src="../components/Button/Button.vue"></demo>
 
+## 禁用状态
+
+不可以点击
+
+<demo src="../components/Button/Button-disabled.vue"></demo>
+
+
+## 大小形状
+
+分为三种形状：`round` - 圆形、`circle` - 圆角、`default` - 默认
+
+<demo src="../components/Button/Button-shap.vue"></demo>
+
+## 图标按钮
+
+按钮可以带图标
+
+<demo src="../components/Button/Button-icon.vue"></demo>
+
+## 加载中
+
+按钮可以进入加载状态
+
+<demo src="../components/Button/Button-loading.vue"></demo>
+
+
 ## 事件处理
 
 ::: info 提示
@@ -31,10 +57,10 @@
 
 `<Tbutton>` 组件提供了以下可配置的 Props：
 
-| 参数名    | 描述                              | 类型                                  |  默认值   |
-| :-------- | :-------------------------------- | :------------------------------------ | :-------: |
-| type      | 按钮的类型:用于给当前按钮附加类型 | `large` 、`middle`、`small`、`mini`   | `middle`  |
-| size      | 按钮的尺寸                        | `default`、`primary`、`plain`、`gray` | `default` |
+| 参数名 | 描述                              | 类型                                  |  默认值   |
+| :----- | :-------------------------------- | :------------------------------------ | :-------: |
+| type   | 按钮的类型:用于给当前按钮附加类型 | `large` 、`middle`、`small`、`mini`   | `middle`  |
+| size   | 按钮的尺寸                        | `default`、`primary`、`plain`、`gray` | `default` |
 
 
 

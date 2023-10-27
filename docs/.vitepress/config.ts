@@ -82,5 +82,12 @@ export default defineConfig({
         config: (md) => {
             md.use(demoblock)
         }
+    },
+    vue: {
+        template: {
+            compilerOptions: {
+                isCustomElement: (tag) => ['ion-icon'].includes(tag),
+            }
+        }
     }
 })

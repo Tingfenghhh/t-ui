@@ -2,6 +2,7 @@ import type { App, Component } from 'vue'
 import Tbutton from "./button";
 import Tspace from "./space";
 import Ticon from './icon';
+import "./global.less"; // 开发全局样式
 
 
 // 按需引入

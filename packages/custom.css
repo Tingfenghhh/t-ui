@@ -1,4 +1,4 @@
-body {
-    /* 可以覆盖global，需要引用 */
+/* 可以覆盖global，需要引用 */
+/* body {
     --color-default: #000;
-}
+} */
