@@ -12,8 +12,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   box-sizing: border-box;
-  padding: 5px 6px;
+  padding: 5px 8px;
   transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .default {
@@ -59,27 +62,97 @@
 
 .large {
   height: 36px;
-  min-width: 80px;
   font-size: 16px;
 }
 
 .middle {
   height: 32px;
-  min-width: 60px;
   font-size: 14px;
   padding: 4px 6px;
 }
 
 .small {
   height: 28px;
-  min-width: 40px;
   font-size: 12px;
   padding: 2px 6px;
 }
 
 .mini {
   height: 25px;
-  min-width: 40px;
   font-size: 10px;
   padding: 0px 6px;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.default-disabled {
+  background-color: var(--color-default-disabled);
+  color: #fff;
+
+  &:hover {
+    background-color: var(--color-default-disabled);
+  }
+}
+
+.primary-disabled {
+  background-color: var(--color-primary-disabled);
+  color: #fff;
+
+  &:hover {
+    background-color: var(--color-primary-disabled);
+  }
+}
+
+.plain-disabled {
+  color: gray;
+
+  &:hover {
+    background-color: transparent;
+    color: gray;
+  }
+}
+
+.gray-disabled {
+  background-color: var(--color-gray-disabled);
+  color: #fff;
+
+  &:hover {
+    background-color: var(--color-gray-disabled);
+  }
+}
+
+
+.circle {
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.circle-middle {
+  height: 32px;
+  width: 32px;
+}
+
+.circle-large {
+  width: 36px;
+}
+
+.circle-small {
+  height: 28px;
+  width: 28px;
+}
+
+.circle-mini {
+  height: 25px;
+  width: 25px;
+}
+
+
+.round {
+  border-radius: 5px;
+}
+
+.square {
+  border-radius: 0;
 }

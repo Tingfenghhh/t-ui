@@ -5,7 +5,15 @@ import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), dts({
+  plugins: [vue(
+    {
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => ['ion-icon'].includes(tag),
+        }
+      }
+    }
+  ), dts({
     // outDir: ["./tingfeng-ui/es/src", "./tingfeng-ui/lib/src"],
     // tsconfigPath: "./tsconfig.json",
   }
