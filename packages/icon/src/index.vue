@@ -39,6 +39,11 @@ const colors = computed(() => {
 <style lang="less" scoped>
 .icon {
   margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+
 }
 .size {
   font-size: v-bind(sizeNumber);

@@ -1,5 +1,6 @@
 <script lang="ts" setup name="Tbutton">
 import { computed } from "vue";
+import Ticon from "../../icon/src/index.vue";
 
 interface Props {
   size?: "large" | "middle" | "small" | "mini";
@@ -71,7 +72,7 @@ const handleClick = (e: MouseEvent) => {
       <Ticon
         v-if="isLoading"
         :class="[{ loadingIcon: isLoading }]"
-        :name="'refresh-sharp'"
+        :name="'sync-circle-outline'"
         :color="loadingColor"
         :size="16"
       />
