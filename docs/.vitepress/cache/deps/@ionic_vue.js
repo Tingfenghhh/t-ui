@@ -93,6 +93,7 @@ import {
   shallowEqualStringMap,
   transitionEndAsync
 } from "./chunk-MXRYIG74.js";
+import "./chunk-J4VLYDXT.js";
 import {
   Teleport,
   computed,
@@ -110,7 +111,6 @@ import {
   watch,
   watchEffect
 } from "./chunk-YW53L7UT.js";
-import "./chunk-J4VLYDXT.js";
 
 // node_modules/@ionic/core/components/index7.js
 var arrowBackSharp = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><path stroke-linecap='square' stroke-miterlimit='10' stroke-width='48' d='M244 400L100 256l144-144M120 256h292' class='ionicon-fill-none'/></svg>";
