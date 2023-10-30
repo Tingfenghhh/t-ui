@@ -68,7 +68,7 @@
 
 | 参数名 | 描述                              | 类型                                  |  默认值   |
 | :----- | :-------------------------------- | :------------------------------------ | :------- |
-| icon  | 按钮的图标 | `string`   | 默认为空,具体参考该<a href="https://ionicons.com/" target="_blank">ionicons</a>网站的图标，只取出名字即可  |
+| icon  | 按钮的图标 | `string`   | 默认为空,具体参考该<a href="https://xicons.org/#/zh-CN" target="_blank">xicons</a>网站fluent标签下的图标，只取出名字即可  |
 
 
 

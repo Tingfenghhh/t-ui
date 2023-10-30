@@ -26,9 +26,9 @@ yarn add tingfeng
 
 ```ts
     
-import TingFengUI from 'tingfeng/tingfeng-ui'
+import TingFengUI from 'tingfeng/tingfeng-ui/lib/src'
 
-import 'tingfeng/tingfeng-ui/index.css'
+import 'tingfeng/tingfeng-ui/lib/css/index.css'
 
 app.use(TingFengUI)
     
@@ -59,46 +59,9 @@ const click = (e: MouseEvent) => {
 ```json
 {
   "compilerOptions": {
-    "types": ["tingfeng/tingfeng-ui/components.d.ts"]
+    "types": ["tingfeng/tingfeng-ui/lib/src/components.d.ts"]
   }
 }
-```
-
-# 使用`@ionic/vue`
-
-## 1.下载`@ionic/vue`安装包
-
-
-
-```js
-
-npm install @ionic/vue
-
-```
-
-```js
-
-yarn add @ionic/vue
-
-
-```
-
-
-
-## 2. 引用
-
-`main.ts`中引用后即可使用
-
-```ts
-    
-import { IonicVue } from '@ionic/vue';
-import '@ionic/vue/css/ionic.bundle.css';
-import { addIcons } from 'ionicons';
-import * as allIcons from 'ionicons/icons';
-addIcons(allIcons);
-
-app.use(IonicVue)
-    
 ```
 
 

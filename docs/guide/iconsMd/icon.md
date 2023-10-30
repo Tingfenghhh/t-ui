@@ -1,4 +1,4 @@
-# 使用`@ionic/vue`
+# 使用`@ionic/vue`（已经弃用）
 
 ## 1.下载`@ionic/vue`安装包
 

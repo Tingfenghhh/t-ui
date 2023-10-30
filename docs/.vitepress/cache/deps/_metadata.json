@@ -1,132 +1,51 @@
 {
-  "hash": "24b21291",
-  "browserHash": "41d1ed0c",
+  "hash": "2626fe72",
+  "browserHash": "6d9174cc",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "78295909",
+      "fileHash": "64131a49",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "f17d9e03",
+      "fileHash": "52b8f7b8",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "96b59bea",
+      "fileHash": "45c47440",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "bdf44da0",
+      "fileHash": "f02ed06b",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "120b3487",
+      "fileHash": "59310651",
       "needsInterop": false
     },
-    "@ionic/vue": {
-      "src": "../../../../node_modules/@ionic/vue/dist/index.js",
-      "file": "@ionic_vue.js",
-      "fileHash": "f31da431",
+    "@vicons/fluent": {
+      "src": "../../../../node_modules/@vicons/fluent/es/index.js",
+      "file": "@vicons_fluent.js",
+      "fileHash": "13994143",
       "needsInterop": false
     },
-    "ionicons": {
-      "src": "../../../../node_modules/ionicons/dist/index.js",
-      "file": "ionicons.js",
-      "fileHash": "9051ed31",
-      "needsInterop": false
-    },
-    "ionicons/icons": {
-      "src": "../../../../node_modules/ionicons/icons/index.mjs",
-      "file": "ionicons_icons.js",
-      "fileHash": "b279c016",
+    "@vicons/utils": {
+      "src": "../../../../node_modules/@vicons/utils/es/index.js",
+      "file": "@vicons_utils.js",
+      "fileHash": "84203abe",
       "needsInterop": false
     }
   },
   "chunks": {
-    "status-tap-DJFKLBSS": {
-      "file": "status-tap-DJFKLBSS.js"
-    },
-    "input-shims-3WE6NR72": {
-      "file": "input-shims-3WE6NR72.js"
-    },
-    "keyboard2-D42DOL6O": {
-      "file": "keyboard2-D42DOL6O.js"
-    },
-    "shadow-css-KEYOOHTW": {
-      "file": "shadow-css-KEYOOHTW.js"
-    },
-    "focus-visible-7AHCYQUZ": {
-      "file": "focus-visible-7AHCYQUZ.js"
-    },
-    "hardware-back-button-XCSKPET7": {
-      "file": "hardware-back-button-XCSKPET7.js"
-    },
-    "ios.transition-ML7PDWJ6": {
-      "file": "ios__transition-ML7PDWJ6.js"
-    },
-    "md.transition-5HGJLORW": {
-      "file": "md__transition-5HGJLORW.js"
-    },
-    "index3-XWJW53RJ": {
-      "file": "index3-XWJW53RJ.js"
-    },
-    "swipe-back-EYBO4563": {
-      "file": "swipe-back-EYBO4563.js"
-    },
-    "index9-DZGKFVBN": {
-      "file": "index9-DZGKFVBN.js"
-    },
-    "chunk-V5D2NUWF": {
-      "file": "chunk-V5D2NUWF.js"
-    },
-    "chunk-QNSCOJJM": {
-      "file": "chunk-QNSCOJJM.js"
-    },
-    "chunk-5PYDTZZF": {
-      "file": "chunk-5PYDTZZF.js"
-    },
-    "chunk-CKEKH2BV": {
-      "file": "chunk-CKEKH2BV.js"
-    },
-    "chunk-F76SUYA2": {
-      "file": "chunk-F76SUYA2.js"
-    },
-    "chunk-5QB4U5RH": {
-      "file": "chunk-5QB4U5RH.js"
-    },
-    "chunk-E4KNFRVJ": {
-      "file": "chunk-E4KNFRVJ.js"
-    },
-    "chunk-EF24X26I": {
-      "file": "chunk-EF24X26I.js"
-    },
-    "chunk-2PSF7TNJ": {
-      "file": "chunk-2PSF7TNJ.js"
-    },
-    "chunk-ZRQDX24Q": {
-      "file": "chunk-ZRQDX24Q.js"
-    },
-    "chunk-J3UQAYHZ": {
-      "file": "chunk-J3UQAYHZ.js"
-    },
-    "chunk-OGKUCXLV": {
-      "file": "chunk-OGKUCXLV.js"
-    },
-    "chunk-MXRYIG74": {
-      "file": "chunk-MXRYIG74.js"
-    },
-    "chunk-J4VLYDXT": {
-      "file": "chunk-J4VLYDXT.js"
-    },
     "chunk-YW53L7UT": {
       "file": "chunk-YW53L7UT.js"
     }

@@ -22,6 +22,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "esModuleInterop": true,
+    "disableSizeLimit":true,
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -29,7 +30,7 @@
     "noFallthroughCasesInSwitch": true,
     "types": [
       "vite/client",
-      "tingfeng-ui/components.d.ts"
+      "tingfeng-ui/lib/src/components.d.ts"
     ],
     // 解析非相对模块名的基准目录
     "baseUrl": "./",

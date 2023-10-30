@@ -13,18 +13,18 @@ const click = (e: MouseEvent) => {
   <Tspace :size="15" :direction="'horizontal'">
     <Tbutton :size="'large'" :shape="'circle'" :type="'default'">
       <template #icon>
-        <Ticon :name="'diamond-outline'" :color="'white'" :size="16" />
+        <Ticon :name="'AccessTime24Filled'" :color="'white'" :size="16" />
       </template>
     </Tbutton>
     <Tbutton :size="'middle'" :shape="'round'" :type="'primary'">
       <template #icon>
-        <Ticon :name="'albums-outline'" :color="'gold'" :size="16" />
+        <Ticon :name="'AccessTime24Filled'" :color="'gold'" :size="16" />
       </template>
       测试组件
     </Tbutton>
     <Tbutton :size="'middle'" :shape="'round'" :type="'primary'">
       <template #icon>
-        <Ticon :name="'diamond-sharp'" :color="'gold'" :size="16" />
+        <Ticon :name="'AccessTime24Filled'" :color="'gold'" :size="16" />
       </template>
       测试组件
     </Tbutton>

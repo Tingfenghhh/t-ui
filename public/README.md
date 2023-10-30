@@ -4,21 +4,20 @@
 
 你可以通过`npm`或`yarn`下载
 
-::: code-group
 
-```[npm 方式]
+```js
 
 npm install tingfeng
 
 ```
 
-``` [yarn 方式]
+```js
 
 yarn add tingfeng
 
 ```
 
-:::
+
    
 
 ## 2. 引用
@@ -27,9 +26,9 @@ yarn add tingfeng
 
 ```ts
     
-import TingFengUI from 'tingfeng/tingfeng-ui/lib/js'
+import TingFengUI from 'tingfeng'
 
-import 'tingfeng/tingfeng-ui/lib/index.css'
+import 'tingfeng/css';
 
 app.use(TingFengUI)
     
@@ -60,15 +59,9 @@ const click = (e: MouseEvent) => {
 ```json
 {
   "compilerOptions": {
-    "types": ["tingfeng/tingfeng-ui/components.d.ts"]
+    "types": ["tingfeng/src/components.d.ts"]
   }
 }
 ```
-
-::: info 提示
-如果没有组件的类型提示，请重启编译器
-:::
-
-
 
 

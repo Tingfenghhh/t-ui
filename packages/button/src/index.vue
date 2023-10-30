@@ -69,13 +69,14 @@ const handleClick = (e: MouseEvent) => {
   >
     <!-- loading插槽 -->
     <slot name="loading">
-      <Ticon
-        v-if="isLoading"
-        :class="[{ loadingIcon: isLoading }]"
-        :name="'sync-circle-outline'"
-        :color="loadingColor"
-        :size="16"
-      />
+      <span :class="[{ loadingIcon: isLoading }]">
+        <Ticon
+          v-if="isLoading"
+          :name="'ArrowSync12Regular'"
+          :color="loadingColor"
+          :size="16"
+        />
+      </span>
     </slot>
     <!-- 插槽内容 -->
     <slot></slot>
@@ -87,10 +88,14 @@ const handleClick = (e: MouseEvent) => {
 <style scoped lang="less">
 @import url("./style/index.less");
 .loadingIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   // 绕自身中心旋转
   animation: rotate 1s linear infinite;
 }
 @keyframes rotate {
+  // 绕自身中心旋转
   from {
     transform: rotate(0deg);
   }

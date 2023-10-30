@@ -14,11 +14,11 @@ export default defineConfig({
         }
       }
     }
-  ), dts({
-    // outDir: ["./tingfeng-ui/es/src", "./tingfeng-ui/lib/src"],
-    // tsconfigPath: "./tsconfig.json",
-  }
-  )],
+  ),
+  dts({
+    outDir: ["./tingfeng-ui/lib/src"],
+  }),
+  ],
   css: {
     // 配置less
     preprocessorOptions: {
@@ -28,8 +28,13 @@ export default defineConfig({
     },
   },
   build: {
+    minify: 'terser', // 压缩代码
+    chunkSizeWarningLimit: 1000, // 超过1000kb的文件将会被提示
     cssCodeSplit: true, //将css文件单独打包
     outDir: "tingfeng-ui", //输出文件名称
+    commonjsOptions: {
+      exclude: ['./public/**'],
+    },
     lib: {
       entry: "./packages/index.ts", //指定组件编译入口文件
       name: "ting-feng-ui", //指定组件库的名称
@@ -44,38 +49,22 @@ export default defineConfig({
         globals: {
           vue: "Vue",
         },
+        entryFileNames: "src/[name].js",
+        assetFileNames: '[ext]/[name].[ext]',
+        // 拆分js到模块文件夹
+        chunkFileNames: (chunkInfo) => {
+          const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/') : [];
+          const fileName = facadeModuleId[facadeModuleId.length - 2] || '[name]';
+          // return `js/${fileName}/[name].js`;
+          return `src/${fileName}/[name].js`;
+        },
+        inlineDynamicImports: false,
+        manualChunks: {
+          vicons: ['@vicons/fluent'],
+        },
+        // 将构建好的文件输出到这里
+        dir: path.resolve(__dirname, "tingfeng-ui/lib"),
       },
-      // [
-      // {
-      //   // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
-      //   globals: {
-      //     vue: "Vue",
-      //   },
-      // },
-      // {
-      //   //打包格式
-      //   format: "es",
-      //   //打包后文件名
-      //   entryFileNames: "[name].mjs",
-      //   //让打包目录和我们目录对应
-      //   preserveModules: true,
-      //   exports: "named",
-      //   //配置打包根目录
-      //   dir: "./tingfeng-ui/es",
-
-      // },
-      // {
-      //   //打包格式
-      //   format: "cjs",
-      //   //打包后文件名
-      //   entryFileNames: "[name].js",
-      //   //让打包目录和我们目录对应
-      //   preserveModules: true,
-      //   exports: "named",
-      //   //配置打包根目录
-      //   dir: "./tingfeng-ui/lib",
-      // },
-      // ]
     },
     terserOptions: { // 在打包代码时移除 console、debugger 和 注释
       compress: {

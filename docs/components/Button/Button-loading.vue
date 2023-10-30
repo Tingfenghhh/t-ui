@@ -29,7 +29,7 @@ setTimeout(() => {
       @handleClick="loadingClick"
     >
       <template #icon>
-        <Ticon :name="'diamond-outline'" :color="'white'" :size="16" />
+        <Ticon :name="'AccessTime24Filled'" :color="'white'" :size="16" />
       </template>
     </Tbutton>
     <Tbutton
@@ -40,7 +40,7 @@ setTimeout(() => {
       @handleClick="loadingClick"
     >
       <template #icon>
-        <Ticon :name="'albums-outline'" :color="'gold'" :size="16" />
+        <Ticon :name="'AccessTime24Filled'" :color="'gold'" :size="16" />
       </template>
       测试组件
     </Tbutton>
@@ -52,7 +52,7 @@ setTimeout(() => {
       @handleClick="loadingClick"
     >
       <template #icon>
-        <Ticon :name="'diamond-sharp'" :color="'gold'" :size="16" />
+        <Ticon :name="'AccessTime24Filled'" :color="'gold'" :size="16" />
       </template>
       测试组件
     </Tbutton>

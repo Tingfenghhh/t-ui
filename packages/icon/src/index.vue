@@ -1,54 +1,36 @@
 <script lang="ts" setup name="Ticon">
+import * as FluentIcon from "@vicons/fluent";
+import { Icon, IconConfigProvider } from "@vicons/utils";
 import { computed } from "vue";
 
-interface IconProps {
+interface ViconsProps {
   name?: string;
   color?: string;
   size?: "small" | "large" | number;
+  tag?: string;
 }
-const props = withDefaults(defineProps<IconProps>(), {
-  name: "airplane-outline",
+
+const props = withDefaults(defineProps<ViconsProps>(), {
+  name: "Accessibility16Regular",
   color: "#000",
   size: 16,
+  tag: "span",
 });
 
-const sizeNumber = computed(() => {
-  if (typeof props.size === "number") {
-    return `${props.size}px`;
-  }
-});
-
-const colors = computed(() => {
-  return props.color;
+// 根据props.name动态引入组件
+const IconVue = computed(() => {
+  const name = props.name;
+  const component = FluentIcon[name];
+  return component;
 });
 </script>
 
 <template>
-  <span class="icon"
-    ><ion-icon
-      :name="props.name"
-      :size="typeof props.size !== 'number' ? props.size : ''"
-      :class="[
-        { color: props.color },
-        { size: typeof props.size === 'number' },
-      ]"
-    ></ion-icon
-  ></span>
+  <IconConfigProvider :color="props.color" :size="props.size">
+    <Icon>
+      <IconVue />
+    </Icon>
+  </IconConfigProvider>
 </template>
 
-<style lang="less" scoped>
-.icon {
-  margin: 0 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2px;
-
-}
-.size {
-  font-size: v-bind(sizeNumber);
-}
-.color {
-  color: v-bind(colors);
-}
-</style>
+<style lang="less" scoped></style>

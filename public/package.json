@@ -1,0 +1,45 @@
+{
+  "name": "tingfeng",
+  "private": false,
+  "version": "0.0.13",
+  "description": "UI包",
+  "author": {
+    "name": "tingfeng",
+    "email": "shisanlailin@outllok.com"
+  },
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "type": "module",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.js"
+    },
+    "./css": {
+      "import": "./css/index.css",
+      "require": "./css/index.css"
+    },
+    "./*": [
+      "./*",
+      "./*.d.ts"
+    ]
+  },
+  "files": [
+    "css",
+    "src",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tingfeng",
+    "tf",
+    "tingfeng-ui",
+    "tingfeng-UI",
+    "TF"
+  ],
+  "license": "MIT"
+}
