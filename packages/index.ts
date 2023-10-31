@@ -5,8 +5,6 @@ import Ticon from './icon';
 import "./global.less"; // 开发全局样式
 
 
-// 按需引入
-export { Tbutton, Tspace, Ticon };
 
 const components: {
 	[propName: string]: Component
@@ -26,4 +24,11 @@ const install: any = (app: any) => {
 export default {
 	install
 };
+// 按需引入
+// export { default as Tbutton } from "./button";
+// export { default as Tspace } from "./space";
+// export { default as Ticon } from './icon';
+
+// 导出组件类型
+// export type { } from "./components";
 
