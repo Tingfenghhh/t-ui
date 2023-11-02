@@ -2,5 +2,5 @@
 import Icon from './src/index.vue'
 import { withInstall } from '../withInstall'
 
-const Ticon: ReturnType<typeof withInstall> = withInstall(Icon)
+const Ticon = withInstall(Icon)
 export default Ticon
