@@ -30,7 +30,7 @@
     "noFallthroughCasesInSwitch": true,
     "types": [
       "vite/client",
-      "tingfeng-ui/lib/src/components.d.ts"
+      "./tingfeng-ui/lib/src/components.d.ts"
     ],
     // 解析非相对模块名的基准目录
     "baseUrl": "./",

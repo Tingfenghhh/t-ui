@@ -16,7 +16,7 @@ export default defineConfig({
             { text: "文档", link: "/guide/start" },
             { text: "gitee", link: "https://gitee.com/shisanlailin" },
             {
-                text: "Drop Menu",
+                text: "下拉菜单",
                 items: [
                     {
                         items: [
@@ -49,6 +49,10 @@ export default defineConfig({
                     {
                         text: "Button组件",
                         link: "/guide/Button",
+                    },
+                    {
+                        text: "echarts组件",
+                        link: "/guide/Echarts"
                     },
                     {
                         text: "other组件",

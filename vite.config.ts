@@ -61,6 +61,9 @@ export default defineConfig({
         inlineDynamicImports: false,
         manualChunks: {
           vicons: ['@vicons/fluent'],
+          dayjs: ['dayjs'],
+          echarts: ['echarts'],
+          VCharts: ['vue-echarts'],
         },
         // 将构建好的文件输出到这里
         dir: path.resolve(__dirname, "tingfeng-ui/lib"),
