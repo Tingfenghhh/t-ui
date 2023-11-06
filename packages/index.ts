@@ -24,7 +24,8 @@ const install: any = (app: any) => {
 	installComponents(app)
 }
 export default {
-	install
+	install,
+	TMessage,
 };
 
 

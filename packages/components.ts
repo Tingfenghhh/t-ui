@@ -13,8 +13,4 @@ declare module '@vue/runtime-core' {
     TEchartsLineBar: typeof TEcharts.TEchartsLineBar
     TEchartsLineBacCross: typeof TEcharts.TEchartsLineBacCross
   }
-  // 定义全局方法
-  export interface ComponentCustomProperties {
-    $message: typeof TMessage
-  }
 }
