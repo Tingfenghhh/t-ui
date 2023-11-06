@@ -9,7 +9,7 @@ import {
 } from "echarts";
 import { nanoid } from "nanoid";
 import VCharts from "vue-echarts";
-import { GridOption } from "echarts/types/dist/shared";
+import { ECElementEvent, GridOption } from "echarts/types/dist/shared";
 import { LineAndBarChartSeriesOfBacItem } from "./type";
 
 type EChartsOption = echarts.EChartsOption;
@@ -26,10 +26,13 @@ interface PorpsOfLineChart {
   XAxisLabel?: any;
   YAxisLabel?: any;
   loadings?: boolean;
+  TEChartsOption?: EChartsOption;
 }
 
 const emits = defineEmits<{
-  (e: "changeValue", value: any): void;
+  (e: "legendChangeValue", value: any): void;
+  (e: "mouseout", value: ECElementEvent): any;
+  (e: "mouseover", value: ECElementEvent): any;
 }>();
 
 const VChartsRef = ref();
@@ -48,6 +51,7 @@ const props = withDefaults(defineProps<PorpsOfLineChart>(), {
   XandYColor: "#00DAF0",
   BarAndLineColor: () => ["#08E0A1", "#fc947e"],
   loadings: false,
+  TEChartsOption: () => ({} as EChartsOption),
 });
 
 const Nanoid = nanoid();
@@ -349,13 +353,14 @@ let options = computed(() => {
       },
     },
     series: [...getServiseData.value],
+    ...props.TEChartsOption,
   } as EChartsOption;
 });
 
 // 图例点击事件
 const legendselectchanged = (e: any) => {
   nowLegend.value = e.selected;
-  emits("changeValue", nowLegend.value);
+  emits("legendChangeValue", nowLegend.value);
 };
 const porpsLoading = computed(() => {
   return props.loadings;
@@ -399,6 +404,15 @@ watch(
   }
 );
 
+const mouseoutHandle = (params: ECElementEvent): any => {
+  goMove();
+  emits("mouseout", params);
+};
+const mouseoverHandle = (params: ECElementEvent): any => {
+  stop();
+  emits("mouseover", params);
+};
+
 onMounted(() => {
   autoOptions.value = options.value;
   if (autoMoveHander) {
@@ -428,8 +442,8 @@ onBeforeUnmount(() => {
       maskColor: 'rgba(55, 54, 50,0.2)',
     }"
     @legendselectchanged="legendselectchanged"
-    @mouseout="goMove"
-    @mouseover="stop"
+    @mouseout="mouseoutHandle"
+    @mouseover="mouseoverHandle"
     @zr:mousewheel="stop"
     @zr:mouseout="goMove"
   />

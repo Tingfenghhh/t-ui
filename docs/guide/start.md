@@ -27,9 +27,9 @@ yarn add tingfeng
 
 ```ts
     
-import TingFengUI from 'tingfeng/tingfeng-ui/lib/js'
+import TingFengUI from 'tingfeng'
 
-import 'tingfeng/tingfeng-ui/lib/index.css'
+import 'tingfeng/css'
 
 app.use(TingFengUI)
     
@@ -60,7 +60,7 @@ const click = (e: MouseEvent) => {
 ```json
 {
   "compilerOptions": {
-    "types": ["tingfeng/tingfeng-ui/components.d.ts"]
+    "types": ["tingfeng/src/components.d.ts"]
   }
 }
 ```

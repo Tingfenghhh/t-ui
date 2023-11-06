@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-import { LineAndBarChartSeriesOfBacItem } from "../packages/echarts/src/components/type";
+import {
+  GetLineChartSeriesOfBacItem,
+  LineAndBarChartSeriesOfBacItem,
+} from "../packages/echarts/src/components/type";
+import { getSeriesOfBack } from "./utils/chartsUtils";
 import { computed, ref } from "vue";
 
 const click = (e: MouseEvent) => {
@@ -15,6 +19,9 @@ setTimeout(() => {
   loadingBoolean.value = false;
 }, 5000);
 
+/* -------------------------------------------------------------------------- */
+/*                               TEchartsLineBar                              */
+/* -------------------------------------------------------------------------- */
 const heights = computed(() => {
   return `140px`;
 });
@@ -106,6 +113,53 @@ const PcNumBar = computed((): LineAndBarChartSeriesOfBacItem => {
 
 const seriesDara = computed((): LineAndBarChartSeriesOfBacItem[] => {
   return [AllNumLine.value, WiseNumBar.value, PcNumBar.value];
+});
+
+/* -------------------------------------------------------------------------- */
+/*                            TEchartsLineBacCross                            */
+/* -------------------------------------------------------------------------- */
+const XdataOfLineBac = ref([
+  "1号",
+  "2号",
+  "3号",
+  "4号",
+  "5号",
+  "6号",
+  "7号",
+  "8号",
+  "9号",
+  "10号",
+  "11号",
+  "12号",
+  "13号",
+  "14号",
+  "15号",
+  "16号",
+  "17号",
+  "18号",
+  "19号",
+  "20号",
+  "21号",
+  "22号",
+  "23号",
+  "24号",
+  "25号",
+  "26号",
+  "27号",
+  "28号",
+  "29号",
+  "30号",
+]);
+const nameArr = ["今年", "去年"];
+const colorArr = ["233, 223, 103", "15, 212, 145 "];
+
+const seriesDataOfLineBac = computed((): GetLineChartSeriesOfBacItem[] => {
+  const arr: GetLineChartSeriesOfBacItem[] = [];
+
+  Array.from({ length: 2 }).forEach((item, index) =>
+    arr.push(...getSeriesOfBack("30", nameArr[index]))
+  );
+  return arr;
 });
 </script>
 
@@ -210,6 +264,16 @@ const seriesDara = computed((): LineAndBarChartSeriesOfBacItem[] => {
         :Xdata="Xdata"
         :series-data="seriesDara"
         :BarAndLineColor="color"
+      />
+    </div>
+    <!-- echarts-line-bac-cross  -->
+    <div style="width: 400px; height: 200px">
+      <TEchartsLineBacCross
+        :height="heights"
+        :Xdata="XdataOfLineBac"
+        :colorArr="colorArr"
+        :series-data="seriesDataOfLineBac"
+        :isAutoCroll="true"
       />
     </div>
   </Tspace>

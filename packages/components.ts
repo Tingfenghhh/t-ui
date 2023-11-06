@@ -9,5 +9,6 @@ declare module '@vue/runtime-core' {
     Tspace: typeof Tspace
     Ticon: typeof Ticon
     TEchartsLineBar: typeof TEcharts.TEchartsLineBar
+    TEchartsLineBacCross: typeof TEcharts.TEchartsLineBacCross
   }
 }

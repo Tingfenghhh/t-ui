@@ -51,13 +51,13 @@ export default defineConfig({
                         link: "/guide/Button",
                     },
                     {
-                        text: "echarts组件",
+                        text: "Echarts组件",
                         link: "/guide/Echarts"
                     },
-                    {
-                        text: "other组件",
-                        link: "...",
-                    },
+                    // {
+                    //     text: "other组件",
+                    //     link: "...",
+                    // },
                 ],
             },
             {
