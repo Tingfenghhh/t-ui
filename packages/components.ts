@@ -1,13 +1,13 @@
-import Tbutton from "./button/src/index.vue"
-import Tspace from "./space/src/index.vue"
-import Ticon from "./icon/src/index.vue"
-import TEchartsLineBar from "./echarts/src/components/echarts-line-bar.vue"
+import Tbutton from "./button"
+import Tspace from "./space"
+import Ticon from "./icon"
+import TEcharts from "./echarts"
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Tbutton: typeof Tbutton
     Tspace: typeof Tspace
     Ticon: typeof Ticon
-    TEchartsLineBar: typeof TEchartsLineBar
+    TEchartsLineBar: typeof TEcharts.TEchartsLineBar
   }
 }
