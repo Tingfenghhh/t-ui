@@ -5,9 +5,12 @@ import {
 } from "../packages/echarts/src/components/type";
 import { getSeriesOfBack } from "./utils/chartsUtils";
 import { computed, ref } from "vue";
+import TMessage from "../packages/message";
 
+const tyep = ["success", "info", "warning", "error"];
 const click = (e: MouseEvent) => {
-  console.log(e);
+  const typeRandom = Math.floor(Math.random() * 4);
+  TMessage[tyep[typeRandom]]("我是被点出来的");
 };
 const loadingClick = (e: MouseEvent) => {
   console.log("loadingClick", e);
@@ -170,9 +173,11 @@ const seriesDataOfLineBac = computed((): GetLineChartSeriesOfBacItem[] => {
       <Tbutton size="large" type="default" @handleClick="click"
         >测试组件</Tbutton
       >
-      <Tbutton size="middle" type="primary">测试组件</Tbutton>
-      <Tbutton size="small" type="plain">测试组件</Tbutton>
-      <Tbutton size="mini" type="gray">测试组件</Tbutton>
+      <Tbutton size="middle" type="primary" @handleClick="click"
+        >测试组件</Tbutton
+      >
+      <Tbutton size="small" type="plain" @handleClick="click">测试组件</Tbutton>
+      <Tbutton size="mini" type="gray" @handleClick="click">测试组件</Tbutton>
     </Tspace>
     <!-- 禁用 -->
     <Tspace :size="40" :direction="'horizontal'">
