@@ -38,33 +38,35 @@ export default defineConfig({
     lib: {
       entry: "./packages/index.ts", //指定组件编译入口文件
       name: "ting-feng-ui", //指定组件库的名称
-      fileName: "index",
+      // fileName: "index",
+      fileName: `index`
     }, //库编译模式配置
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖
-      external: ["vue"],
+      external: ["vue", "dayjs", "echarts", "vue-echarts", "@vicons/fluent", "@vicons/utils"],
       input: [path.resolve(__dirname, "packages/index.ts")],
       output: {
+        format: "es",
         // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
         globals: {
           vue: "Vue",
         },
-        entryFileNames: "src/[name].js",
+        // entryFileNames: "src/[name].js",
         assetFileNames: '[ext]/[name].[ext]',
-        // 拆分js到模块文件夹
-        chunkFileNames: (chunkInfo) => {
-          const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/') : [];
-          const fileName = facadeModuleId[facadeModuleId.length - 2] || '[name]';
-          // return `js/${fileName}/[name].js`;
-          return `src/${fileName}/[name].js`;
-        },
-        inlineDynamicImports: false,
-        manualChunks: {
-          vicons: ['@vicons/fluent'],
-          dayjs: ['dayjs'],
-          echarts: ['echarts'],
-          VCharts: ['vue-echarts'],
-        },
+        // // 拆分js到模块文件夹
+        // chunkFileNames: (chunkInfo) => {
+        //   const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/') : [];
+        //   const fileName = facadeModuleId[facadeModuleId.length - 2] || '[name]';
+        //   // return `js/${fileName}/[name].js`;
+        //   return `src/${fileName}/[name].js`;
+        // },
+        // inlineDynamicImports: false,
+        // manualChunks: {
+        //   vicons: ['@vicons/fluent'],
+        //   dayjs: ['dayjs'],
+        //   echarts: ['echarts'],
+        //   VCharts: ['vue-echarts'],
+        // },
         // 将构建好的文件输出到这里
         dir: path.resolve(__dirname, "tingfeng-ui/lib"),
       },

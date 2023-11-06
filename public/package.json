@@ -1,20 +1,20 @@
 {
   "name": "tingfeng",
   "private": false,
-  "version": "0.0.18",
+  "version": "0.0.21",
   "description": "UI包",
   "author": {
     "name": "tingfeng",
     "email": "shisanlailin@outllok.com"
   },
-  "main": "./src/index.js",
-  "module": "./src/index.js",
+  "main": "./index.js",
+  "module": "./index.js",
   "type": "module",
-  "types": "src/index.d.ts",
+  "types": "./src/index.d.ts",
   "exports": {
     ".": {
-      "import": "./src/index.js",
-      "require": "./src/index.js"
+      "import": "./index.js",
+      "require": "./index.js"
     },
     "./css": {
       "import": "./css/index.css",
@@ -28,6 +28,8 @@
   "files": [
     "css",
     "src",
+    "index.js",
+    "index.umd.cjs",
     "package.json",
     "README.md"
   ],
@@ -41,5 +43,12 @@
     "tingfeng-UI",
     "TF"
   ],
+  "dependencies": {
+    "@vicons/fluent": "^0.12.0",
+    "@vicons/utils": "^0.1.4",
+    "echarts": "^5.4.3",
+    "vue-echarts": "^6.6.1",
+    "dayjs": "^1.11.10"
+  },
   "license": "MIT"
 }
