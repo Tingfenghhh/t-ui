@@ -1,7 +1,7 @@
 {
   "name": "tingfeng",
   "private": false,
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "UI包",
   "author": {
     "name": "tingfeng",
@@ -31,7 +31,8 @@
     "index.js",
     "index.umd.cjs",
     "package.json",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
