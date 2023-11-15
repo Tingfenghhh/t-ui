@@ -167,7 +167,7 @@ const seriesDataOfLineBac = computed((): GetLineChartSeriesOfBacItem[] => {
 </script>
 
 <template>
-  <Tspace v-show="false" :size="10" :direction="'vertical'">
+  <Tspace v-show="true" :size="10" :direction="'vertical'">
     <!-- 基础 -->
     <Tspace :size="40" :direction="'horizontal'">
       <Tbutton size="large" type="default" @handleClick="click"
@@ -281,10 +281,14 @@ const seriesDataOfLineBac = computed((): GetLineChartSeriesOfBacItem[] => {
         :isAutoCroll="true"
       />
     </div>
+    <!-- echarts-line-bac-cross  -->
+    <div style="width: 800px; height: 800px">
+      <TEchartsMap :height="'800px'" />
+    </div>
   </Tspace>
 
   <!-- 时钟 -->
-  <div class="TClock">
+  <div v-if="false" class="TClock">
     <TClock />
   </div>
 </template>
@@ -293,6 +297,6 @@ const seriesDataOfLineBac = computed((): GetLineChartSeriesOfBacItem[] => {
 body {
   margin: 0;
   padding: 0;
-  // background-color: black;
+  background-color: black;
 }
 </style>
