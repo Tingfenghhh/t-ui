@@ -5,6 +5,7 @@ import Ticon from "./icon";
 import TMessage from "./message";
 import Echarts from "./echarts";
 import TClock from "./clock";
+import TMotion from "./motions";
 import "./global.less"; // 开发全局样式
 
 const components: {
@@ -18,6 +19,7 @@ const components: {
   TEchartsMap: Echarts.TEchartsMap,
   TEchartsLineBar: Echarts.TEchartsLineBar,
   TEchartsLineBacCross: Echarts.TEchartsLineBacCross,
+  TMotion,
 };
 
 // 插件声明：声明所有插件

@@ -4,6 +4,7 @@ import Ticon from "./icon";
 import TMessage from "./message";
 import TEcharts from "./echarts";
 import TColock from "./clock/";
+import TMotion from "./motions";
 
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
@@ -15,5 +16,6 @@ declare module "@vue/runtime-core" {
     TEchartsLineBar: typeof TEcharts.TEchartsLineBar;
     TEchartsLineBacCross: typeof TEcharts.TEchartsLineBacCross;
     TEchartsMap: typeof TEcharts.TEchartsMap;
+    TMotion: typeof TMotion;
   }
 }

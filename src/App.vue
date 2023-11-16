@@ -167,7 +167,7 @@ const seriesDataOfLineBac = computed((): GetLineChartSeriesOfBacItem[] => {
 </script>
 
 <template>
-  <Tspace v-show="true" :size="10" :direction="'vertical'">
+  <Tspace v-if="false" :size="10" :direction="'vertical'">
     <!-- 基础 -->
     <Tspace :size="40" :direction="'horizontal'">
       <Tbutton size="large" type="default" @handleClick="click"
@@ -291,6 +291,14 @@ const seriesDataOfLineBac = computed((): GetLineChartSeriesOfBacItem[] => {
   <div v-if="false" class="TClock">
     <TClock />
   </div>
+
+  <!-- TMotion -->
+  <div v-if="true">
+    <TMotion
+      class="motion_idv"
+      :animate="{ rotate: 90, backgroundColor: 'var(#00ffdb)' }"
+    ></TMotion>
+  </div>
 </template>
 
 <style lang="less">
@@ -298,5 +306,14 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
+}
+</style>
+
+<style lang="less" scoped>
+.motion_idv {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #00ffdb;
 }
 </style>
