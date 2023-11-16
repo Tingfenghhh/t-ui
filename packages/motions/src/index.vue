@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Motion } from "motion/vue";
+import { Motion, Presence } from "motion/vue";
 import { CSSProperties, computed } from "vue";
 import { VariantDefinition } from "@motionone/dom/types/state/types";
 import { InViewOptions } from "@motionone/dom/types/gestures/in-view";
@@ -16,6 +16,7 @@ interface MotionsProps {
   inViewOptions?: InViewOptions;
   transition?: AnimationOptionsWithOverrides;
   style?: CSSProperties;
+  [key: string]: any;
 }
 
 const props = defineProps<MotionsProps>();
@@ -32,18 +33,22 @@ const style = computed(() => props.style || {});
 </script>
 
 <template>
-  <Motion
-    :tag="tag"
-    :initial="initial"
-    :animate="animate"
-    :inView="inView"
-    :hover="hover"
-    :press="press"
-    :exit="exit"
-    :inViewOptions="inViewOptions"
-    :transition="transition"
-    :style="style"
-  />
+  <Presence>
+    <Motion
+      :tag="tag"
+      :initial="initial"
+      :animate="animate"
+      :inView="inView"
+      :hover="hover"
+      :press="press"
+      :exit="exit"
+      :inViewOptions="inViewOptions"
+      :transition="transition"
+      :style="style"
+    >
+      <slot></slot>
+    </Motion>
+  </Presence>
 </template>
 
 <style lang="less" scoped></style>

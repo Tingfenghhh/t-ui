@@ -6,6 +6,8 @@ import {
 import { getSeriesOfBack } from "./utils/chartsUtils";
 import { computed, ref } from "vue";
 import TMessage from "../packages/message";
+import { spring } from "motion";
+import { Motion } from "motion/vue";
 
 const tyep = ["success", "info", "warning", "error"];
 const click = (e: MouseEvent) => {
@@ -164,6 +166,19 @@ const seriesDataOfLineBac = computed((): GetLineChartSeriesOfBacItem[] => {
   );
   return arr;
 });
+
+const TMotionShow = ref(true);
+const rotate = ref(0);
+
+const draw = (progress) => ({
+  // This property makes the line "draw" in when animated
+  strokeDashoffset: 1 - progress,
+
+  // Each line will be hidden until it starts drawing
+  // to fix a bug in Safari where the line can be
+  // partially visible even when progress is at 0
+  visibility: "visible",
+});
 </script>
 
 <template>
@@ -295,9 +310,107 @@ const seriesDataOfLineBac = computed((): GetLineChartSeriesOfBacItem[] => {
   <!-- TMotion -->
   <div v-if="true">
     <TMotion
-      class="motion_idv"
-      :animate="{ rotate: 90, backgroundColor: 'var(#00ffdb)' }"
-    ></TMotion>
+      :style="{
+        width: '300px',
+      }"
+    >
+      <Tspace size="10" :direction="'vertical'">
+        <TMotion
+          class="motions_div"
+          :animate="{ rotate }"
+          :transition="{
+            duration: 0.5,
+            easing: spring({
+              stiffness: 600,
+              damping: 15,
+            }),
+          }"
+        >
+          <div class="rotate_motion">
+            <span>1231</span>
+          </div>
+        </TMotion>
+        <TMotion
+          v-show="TMotionShow"
+          class="motions_div"
+          :initial="{
+            opacity: 0,
+            x: 0,
+          }"
+          :animate="{ x: 50, opacity: 1 }"
+          :transition="{
+            duration: 1.05,
+            easing: [0.23, 1.96, 0.74, 0.77],
+            delay: 0.3,
+          }"
+          :exit="{
+            x: -50,
+            transition: {
+              duration: 0.6,
+              easing: [0.23, 1.96, 0.74, 0.77],
+            },
+            opacity: 0,
+          }"
+        >
+          <div class="rotate_motion">
+            <span>吼吼</span>
+          </div>
+        </TMotion>
+        <TMotion
+          v-show="TMotionShow"
+          :initial="{
+            opacity: 0,
+            x: 0,
+          }"
+          :animate="{ x: 50, opacity: 1 }"
+          :transition="{
+            duration: 1.05,
+            easing: [0.23, 1.96, 0.74, 0.77],
+            delay: 0.3,
+          }"
+          :exit="{
+            x: -50,
+            transition: {
+              duration: 0.6,
+              easing: [0.23, 1.96, 0.74, 0.77],
+            },
+            opacity: 0,
+          }"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+            <TMotion
+              tag="circle"
+              cx="100"
+              cy="100"
+              r="80"
+              pathLength="1"
+              :animate="draw(1)"
+              :transition="{ duration: 0.8, delay: 2 }"
+            />
+            <TMotion
+              tag="path"
+              d="M 54 107.5 L 88 138.5 L 144.5 67.5"
+              pathLength="1"
+              :animate="draw(1)"
+              :transition="{ duration: 0.6, delay: 2.4 }"
+            />
+          </svg>
+        </TMotion>
+
+        <Tbutton size="large" type="default" @handleClick="rotate += 45"
+          >rotate+</Tbutton
+        >
+        <Tbutton size="large" type="default" @handleClick="rotate -= 45"
+          >rotate-</Tbutton
+        >
+        <Tbutton
+          size="large"
+          type="default"
+          @handleClick="TMotionShow = !TMotionShow"
+          >TMotionShow</Tbutton
+        >
+      </Tspace>
+    </TMotion>
   </div>
 </template>
 
@@ -307,13 +420,39 @@ body {
   padding: 0;
   background-color: black;
 }
+circle,
+path {
+  fill: transparent;
+  stroke: #57eb64;
+  stroke-width: 6px;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  visibility: hidden;
+}
+
+circle {
+  transform-origin: 100px 100px;
+  transform: rotate(-90deg);
+}
 </style>
 
 <style lang="less" scoped>
-.motion_idv {
-  width: 100px;
-  height: 100px;
+.motions_div {
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
-  background-color: #00ffdb;
+  background-color: #57eb64;
+  text-align: center;
+  border-radius: 15px;
+}
+.rotate_motion {
+  width: 100%;
+  height: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
